@@ -62,12 +62,16 @@
       cursor: pointer;
     }
   }
-}
 
-@media screen and (max-width: 1675px) {
-  .table-chart {
-    margin-right: 1rem;
+  .chart {
     width: 100%;
+    canvas {
+      width: 100% !important;
+      options: {
+        maintainAspectRatio: false;
+      } 
+    }
+    
   }
 }
 
@@ -75,12 +79,6 @@
   .table-chart {
     display: flex;
     padding: 2rem 0;
-    .table {
-      margin-right: 1rem;
-    }
-    .chart {
-      width: auto;
-    }
   }
 }
 

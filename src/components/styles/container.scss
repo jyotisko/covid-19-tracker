@@ -33,14 +33,13 @@
                       'map map map'
                       'table-chart table-chart table-chart';
     grid-template-rows: 10% 25% 65% 35%;
-    grid-template-columns: 35% 35% 29%;
+    grid-template-columns: 35% 35% 30%;
   }
 }
 
 @media screen and (max-width: 1198px) {
   .container {
     grid-template-rows: 10% 20% 65% 35%;
-    padding-right: 3rem;
   }
 }
 
