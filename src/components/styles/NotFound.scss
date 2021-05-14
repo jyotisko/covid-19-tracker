@@ -1,0 +1,40 @@
+.error-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .error {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      font-size: 7rem;
+      .virus-icon {
+        animation: animate 0.5s ease infinite alternate-reverse;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      font-size: 2rem;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(20%);
+  } 
+  100% {
+    from {
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.infobox-container {
+  grid-area: infobox;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3.5rem;
+  height: 100%;
+  width: 100%;
+
+  .infobox {
+    height: 90%;
+    background-color: #fff;
+    width: 100%;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 3rem;
+    position: relative;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      color: #949494;
+    }
+
+    h3 {
+      font-size: 3rem;
+      color: #e84f4f;
+      margin-bottom: 2rem;
+      span {
+        color: #8338ec;
+        font-size: 1.3rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    h5 {
+      font-size: 2rem;
+    }
+
+    &::before {
+      display: block;
+      content: '';
+      height: 1rem;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top-right-radius: 3rem;
+      border-top-left-radius: 3rem;
+    }
+
+    &--total::before {
+      background-color: #cc1034;
+    }
+
+    &--active::before {
+      background-color: #4ecdc4;
+    }
+
+    &--recovered::before {
+      background-color: #7dd71d;
+    }
+
+    &--death::before {
+      background-color: #383838;
+    }
+
+    &:not(:nth-child(2)) {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .infobox-container {
+    .infobox {
+      height: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 1198px) {
+  .infobox-container {
+    grid-gap: 1rem;
+    .infobox {
+      padding: 2.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .infobox-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .infobox {
+      padding: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .infobox-container {
+    .infobox {
+      height: 98%;
+    }
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .infobox-container {
+    .infobox {
+      height: 90%;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.nav {
+  height: 100%;
+  width: 100%;
+  grid-area: nav;
+  padding-left: 3rem;
+  display: flex;
+  .left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+  }
+  .right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      text-transform: capitalize;
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    .left {
+      img {
+        width: 80%;
+      }
+    }
+    .right {
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 546px) {
+  .nav {
+    padding: 0;
+    .left {
+      img {
+        width: 95%;
+      }
+    }
+    .right {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

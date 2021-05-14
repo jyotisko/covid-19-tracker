@@ -1,0 +1,29 @@
+.select-dropdown {
+  grid-area: dropdown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  select {
+    font-size: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1496px) {
+  .select-dropdown {
+    select {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .select-dropdown {
+    select {
+      font-size: 2rem;
+    }
+  }
+}

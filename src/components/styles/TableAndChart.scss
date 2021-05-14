@@ -1,0 +1,101 @@
+.table-chart {
+  grid-area: table-chart;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  
+  .table {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    border-radius: 1rem;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(0, 0, 0);
+    }
+
+    table {
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+
+      thead {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        th {
+          height: 3.4rem;
+          font-size: 3rem;
+          padding: 1rem;
+        }
+      }
+
+      tr {
+        td {
+          height: 4rem;
+          font-size: 2rem;
+          padding: 0.3rem 2rem;
+        }
+        
+        &:nth-child(odd) {
+          background-color: rgba(250, 250, 250, 0.6);
+        }
+
+        &:nth-child(even) {
+          background-color: rgba(250, 250, 250, 0.9);
+        }
+      }
+    }
+
+    .sort-btn {
+      position: absolute;
+      z-index: 4;
+      top: 2%;
+      left: 2%;
+      font-size: 3rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1675px) {
+  .table-chart {
+    margin-right: 1rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .table-chart {
+    display: flex;
+    padding: 2rem 0;
+    .table {
+      margin-right: 1rem;
+    }
+    .chart {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 874px) {
+  .table-chart {
+    display: flex;
+    padding: 2rem 0;
+    flex-direction: column;
+    .table {
+      margin-right: 1rem;
+      margin-bottom: 3rem;  
+    }
+    .chart {
+      width: auto;
+      height: 10%;
+    }
+  }
+}
